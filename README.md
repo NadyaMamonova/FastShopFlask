@@ -25,7 +25,7 @@ Python 3.7+
    
 
 
-    git clone <ссылка_на_репозиторий>
+    git clone https://github.com/NadyaMamonova/FastShopFlask.git
     cd FastShopFlask
    
 
