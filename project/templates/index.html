@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Магазин</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Добро пожаловать в наш магазин!</h1>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flashes">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    <div class="products">
+        <a href="{{ url_for('add_to_cart', product_id=1) }}">Добавить товар 1 в корзину</a><br>
+        <a href="{{ url_for('add_to_cart', product_id=2) }}">Добавить товар 2 в корзину</a><br>
+        <a href="{{ url_for('add_to_cart', product_id=3) }}">Добавить товар 3 в корзину</a><br>
+    </div>
+    <p><a href="{{ url_for('cart') }}">Просмотреть корзину</a></p>
+</body>
+</html>

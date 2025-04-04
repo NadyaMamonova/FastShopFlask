@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Ваша корзина</h1>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flashes">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    {% if cart %}
+        <ul>
+            {% for item in cart %}
+                <li>Товар {{ item }}</li>
+            {% endfor %}
+        </ul>
+        <form method="post" action="{{ url_for('checkout') }}">
+            <input type="submit" value="Оформить заказ">
+        </form>
+    {% else %}
+        <p>Корзина пуста.</p>
+    {% endif %}
+    <p><a href="{{ url_for('index') }}">Вернуться в магазин</a></p>
+</body>
+</html>

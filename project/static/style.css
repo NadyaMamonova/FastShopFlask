@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+}
+
+.products a {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: lightblue;
+    color: white;
+    text-decoration: none;
+}
+
+.flashes li {
+    list-style-type: none;
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+}

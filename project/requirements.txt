@@ -1,0 +1,9 @@
+Flask>=2.3.2
+Flask-Session>=0.3.1
+Celery[redis]>=5.3
+redis>=4.0.0
+gunicorn>=21.2
+Flask-Login>=0.5.0
+Flask-SQLAlchemy>=3.0
+Werkzeug>=2.3.0
+Celery
